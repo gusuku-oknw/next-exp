@@ -1,13 +1,12 @@
-import { config as configBase } from "@tamagui/config/v3";
+import { config as configBase } from "@tamagui/config";
 import { createTamagui } from "tamagui";
 
-const tamaguiConfig = createTamagui(configBase);
+const config = createTamagui(configBase);
 
-export default tamaguiConfig;
+export default config;
 
-export type AppConfig = typeof tamaguiConfig;
+export type Conf = typeof config;
 
 declare module "tamagui" {
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    interface TamaguiCustomConfig extends AppConfig {}
+    interface TamaguiCustomConfig extends Conf {}
 }
