@@ -1,9 +1,12 @@
 import { config as configBase } from "@tamagui/config";
 import { createTamagui } from "tamagui";
+import { themes } from "./themes";
 
-const config = createTamagui(configBase);
+export const config = createTamagui({
+    ...themes,
+    ...configBase,
+})
 
-export default config;
 
 export type Conf = typeof config;
 

@@ -3,7 +3,7 @@ import { TamaguiProvider } from "@tamagui/core";
 import { useColorScheme } from "react-native";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
-import config from "../tamagui.config";
+import { config } from "../tamagui.config";
 
 export default function RootLayout() {
     const [interLoaded, interError] = useFonts({
